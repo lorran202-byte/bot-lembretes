@@ -1,5 +1,5 @@
 // Datas e horas sempre no fuso do personal, independente do fuso do servidor.
-export const TZ = process.env.FUSO || 'America/Fortaleza';
+export const TZ = 'America/Fortaleza';
 
 const fmt = new Intl.DateTimeFormat('en-CA', {
   timeZone: TZ,

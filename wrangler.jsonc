@@ -1,0 +1,21 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "bot-lembretes",
+  "main": "src/index.js",
+  "compatibility_date": "2025-10-08",
+  "workers_dev": true,
+  // roda a cada minuto para mandar os lembretes na hora certa
+  "triggers": {
+    "crons": ["* * * * *"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "bot-lembretes",
+      "database_id": "00000000-0000-4000-8000-000000000000"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}

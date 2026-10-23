@@ -1,4 +1,3 @@
 node_modules/
-dados/
-.env
-*.log
+.wrangler/
+.dev.vars

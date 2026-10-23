@@ -1,19 +1,23 @@
 {
   "name": "bot-lembretes",
-  "version": "1.0.0",
-  "description": "Bot de WhatsApp que lembra alunos particulares do treino e coleta a confirmação de presença",
+  "description": "Bot do Telegram que lembra os alunos do treino e coleta a confirmação de presença",
+  "private": true,
   "type": "module",
-  "main": "src/server.js",
   "scripts": {
-    "start": "node src/server.js",
-    "teste": "MOCK_WA=1 PORT=3000 node src/server.js"
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev --test-scheduled",
+    "teste": "node --no-warnings teste/teste.mjs"
   },
-  "engines": {
-    "node": ">=20"
+  "devDependencies": {
+    "wrangler": "4.136.1"
   },
-  "dependencies": {
-    "baileys": "7.0.0-rc14",
-    "pino": "^9.6.0"
-  },
-  "license": "MIT"
+  "cloudflare": {
+    "label": "Bot de lembretes de treino (Telegram)",
+    "products": ["Workers", "D1"],
+    "bindings": {
+      "BOT_TOKEN": {
+        "description": "O token que o **@BotFather** te enviou no Telegram quando você criou o bot. Parece com `7412345678:AAH...`"
+      }
+    }
+  }
 }
