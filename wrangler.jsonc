@@ -11,8 +11,8 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "bot-lembretes",
-      "database_id": "00000000-0000-4000-8000-000000000000"
+      "database_name": "lembretes-treino",
+      "database_id": "3d99fc34-628b-4292-936f-97949939ceb4"
     }
   ],
   "observability": {
