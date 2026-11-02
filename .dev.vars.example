@@ -1,1 +1,7 @@
-BOT_TOKEN=cole-aqui-o-token-do-BotFather
+WA_TOKEN=cole-aqui-o-token-permanente
+WA_PHONE_ID=identificacao-do-numero
+WA_WABA_ID=identificacao-da-conta-do-whatsapp-business
+WA_APP_ID=id-do-app
+WA_APP_SECRET=chave-secreta-do-app
+# opcional: só se o número já tinha um PIN de confirmação em duas etapas
+# WA_PIN=123456
