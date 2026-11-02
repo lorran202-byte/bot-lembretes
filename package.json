@@ -1,6 +1,6 @@
 {
   "name": "bot-lembretes",
-  "description": "Bot do Telegram que lembra os alunos do treino e coleta a confirmação de presença",
+  "description": "Bot do WhatsApp (API oficial da Meta) que lembra os alunos do treino e coleta a confirmação de presença",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,11 +12,23 @@
     "wrangler": "4.136.1"
   },
   "cloudflare": {
-    "label": "Bot de lembretes de treino (Telegram)",
+    "label": "Bot de lembretes de treino (WhatsApp oficial)",
     "products": ["Workers", "D1"],
     "bindings": {
-      "BOT_TOKEN": {
-        "description": "O token que o **@BotFather** te enviou no Telegram quando você criou o bot. Parece com `7412345678:AAH...`"
+      "WA_TOKEN": {
+        "description": "Token **permanente** do usuário do sistema (Configurações do negócio › Usuários do sistema › Gerar token), com as permissões `whatsapp_business_messaging` e `whatsapp_business_management`."
+      },
+      "WA_PHONE_ID": {
+        "description": "**Identificação do número de telefone** (Phone number ID), na tela WhatsApp › Configuração da API do seu app na Meta."
+      },
+      "WA_WABA_ID": {
+        "description": "**Identificação da conta do WhatsApp Business** (WhatsApp Business Account ID), na mesma tela, logo abaixo."
+      },
+      "WA_APP_ID": {
+        "description": "**ID do app**, em Configurações do app › Básico."
+      },
+      "WA_APP_SECRET": {
+        "description": "**Chave secreta do app** (App secret), em Configurações do app › Básico › Mostrar."
       }
     }
   }
